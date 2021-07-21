@@ -9,13 +9,22 @@
 		</header>
 		<div>
 			<% @posts.each do |post| %>
-			<div>
-				<hr>
-				<h2><%= post.title %></h2>
-				<br>
-				<div><%= image_tag(post.image_url) %></div>
-				<p><%= post.content %></p>
-			</div>
+				<div>
+					<hr>
+					<h2><%= post.title %></h2>
+					<br>
+					<div>
+						<%= image_tag(post.image_url) %>
+					</div>
+					<div>
+						<% if post.content.include? "YOUR MOM" %>
+							<% post.content["YOUR MOM"] = "" %>
+							<p><%= post.content %></p>
+						<% else %>
+							<p><%= post.content %></p>
+						<% end %>
+					</div>
+				</div>
 			<% end %>
 		</div>
 		<br>
