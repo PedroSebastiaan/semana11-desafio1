@@ -23,6 +23,6 @@ Things you may want to cover:
 
 * ...
 
-* LA PALABRA SENSURADA ES ""
+* LA PALABRA SENSURADA ES "YOUR MOM"
 
 
