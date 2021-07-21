@@ -1,0 +1,28 @@
+<div class="container">
+    <hr>
+    <% if @post.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+                <%= pluralize(@post.errors.count, "error") %>
+                Prohibited this operation from being saved:
+            </h2>
+            <br>
+            <ul>
+                <%= @post.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+            <div class="text-center">
+                <hr>
+                <h3>Try again <%= link_to 'HERE', posts_new_path %>.</h3>
+            </div>
+        </div>
+    <% else %>
+    <div class="text-center">
+        <h1>Your post was uploated!</h1>
+        <%= @post %>
+    </div>
+    <% end %>
+    <hr>
+</div>
+
