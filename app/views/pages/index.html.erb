@@ -7,13 +7,13 @@
 			<h3>We will sensure the word "YOUR MOM".</h3>
 			<p>All the posts are here!</p>
 		</header>
-			<nav class="navbar navbar-light">
-				<a class="navbar-brand">You can search a post using title!</a>
-				<form class="form-inline">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
-			</nav>
+		<nav class="navbar navbar-light">
+			<a class="navbar-brand">You can search a post using title!</a>
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</nav>
 		<div>
 			<% @posts.each do |post| %>
 				<div>
@@ -21,7 +21,11 @@
 					<h2><%= post.title %></h2>
 					<br>
 					<div>
-						<%= image_tag(post.image_url) %>
+						<%if post.image_url.include?("http")%>
+							<%= image_tag(post.image_url) %>
+						<% else %>
+							<%= image_tag("https://png.pngitem.com/pimgs/s/296-2968857_pixel-art-black-and-white-hd-png-download.png") %>
+						<% end %>
 					</div>
 					<div>
 						<% if post.content.include? "YOUR MOM" %>
