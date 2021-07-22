@@ -25,4 +25,6 @@ Things you may want to cover:
 
 * LA PALABRA SENSURADA ES "YOUR MOM"
 
+* Desafio correspondiente a la fecha 20 de julio.
+
 
