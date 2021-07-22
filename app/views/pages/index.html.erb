@@ -21,7 +21,7 @@
 					<h2><%= post.title %></h2>
 					<br>
 					<div>
-						<%if post.image_url.include?("http")%>
+						<%if post.image_url.include?("http") || post.image_url.include?("google")%>
 							<%= image_tag(post.image_url) %>
 						<% else %>
 							<%= image_tag("https://png.pngitem.com/pimgs/s/296-2968857_pixel-art-black-and-white-hd-png-download.png") %>
